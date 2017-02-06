@@ -1,3 +1,18 @@
 <h1>
   {{title}}
 </h1>
+<div>
+  <ul>
+    <li *ngFor="let item of items | async">
+      {{ item.idLine }}, 
+      {{ item.line }}, 
+      {{ item.busStop }}, 
+      {{ item.idBusStop }},
+      {{ item.busStop }},
+      {{ item.time.hours }}:{{ item.time.minutes }}:{{ item.time.seconds }},
+      {{ item.type }}, 
+      {{ item.isHere }}, 
+      {{ item.isGoingToHere }}
+    </li>
+  </ul>
+</div>
