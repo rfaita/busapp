@@ -1,3 +1,4 @@
+import { Routes, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -5,6 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
+import { LinesComponent } from './lines/lines.component';
+import { BusStopsComponent } from './busstops/busstops.component';
+import { MDL } from './mdl.directive';
+import { routing } from './app.routes';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDSxkZocD1-Ctm1cqaunpdpnVYnATk3doM",
@@ -16,13 +22,17 @@ export const firebaseConfig = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LinesComponent,
+    BusStopsComponent,
+    MDL        
   ],
   imports: [
     AngularFireModule.initializeApp(firebaseConfig),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<ul>
+  <li class="mdl-list__item mdl-list__item--two-line" *ngFor="let item of items | async">
+
+    <span class="mdl-list__item-primary-content">
+      <i class="material-icons mdl-list__item-avatar">directions_bus</i>
+      <span>{{item.busStop}}</span>
+
+      <span class="mdl-list__item-secondary-content">
+        <a class="mdl-list__item-secondary-action" href="#"><i class="material-icons">star</i></a>
+      </span>
+    </span>
+  </li>
+</ul>
